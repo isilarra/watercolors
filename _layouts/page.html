@@ -1,0 +1,95 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+  {% include head.html %}
+
+  <body class="site">
+
+    {% if site.google_tag_manager %}
+
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
+    {% endif %}
+
+    {% include header.html %}
+
+<!--
+    <div class="hero--small">
+      <div class="hero__wrap">
+        <h1 class="hero__title">{{ page.title }}</h1>
+      </div>
+    </div>
+-->
+
+
+      <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      .container2 {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      .centered {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* .hero__title{
+        font-size:5.5em;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color:#fff
+      } */
+
+      .new__title{
+        font-size:5.5em;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color:#fff
+      }
+
+      </style>
+      </head>
+      <body>
+
+      <div class="container2">
+        <!-- <img src="{{site.baseurl}}/assets/img/posts/portada_thin.png" style="width:100%;"> -->
+        <img src="{{site.url}}{{site.baseurl}}/assets/img/posts/portada_thin.jpg" style="width:100%;">
+        <div class="centered">
+          <h1 class="new__title">{{ page.title }} </h1>
+        </div>
+      </div>
+
+      </body>
+
+
+
+
+
+
+
+    <main class="site__content">
+
+      <div class="container">
+        <div class="page-content">
+
+          {{ content }}
+
+        </div>
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
